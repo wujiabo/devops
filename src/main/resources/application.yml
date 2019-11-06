@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: local
+---
+spring:
+  profiles: local
+  application:
+    name: devops
+server:
+  servlet:
+    context-path: /devops
+  port: 8001
+---
+spring:
+  profiles: k8s
+  application:
+    name: devops
+server:
+  servlet:
+    context-path: /devops
+  port: 8001
